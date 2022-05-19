@@ -6,7 +6,7 @@ This exporter collects performance and usage stats from a Dell EMC XtremIO clust
 
 ## Usage & Configuration
 ### Configuration
-To run the exporter, you must make a configuration file called `config.json` located in the same directory as [xtremio.py](xtremio.py). An example of a configuration file can be found below or in [example_config](example_config.json).
+To run the exporter, you must make a configuration file called `config.json` located in the /config/ directory. An example of a configuration file can be found below or in [example_config](example_config.json).
 
 ````json
 {
@@ -115,7 +115,7 @@ To run the image you need to mount the configuration file that you're using. Onl
 ````
 docker run -d \
     --name prometheus-xtremio-exporter \
-    -v /absolute/path/to/config.json:/opt/xtremio_exporter/config.json:ro \
+    -v /absolute/path/to/config.json:/config/config.json:ro \
     -p 9891:9891 \
     prometheus-xtremio-exporter
 ````

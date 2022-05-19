@@ -416,7 +416,7 @@ class Collector(object):
 
 def load_config():
     try:
-        configFile = open("config.json","r")
+        configFile = open("/config/config.json","r")
         config = json.loads(configFile.read())
         configFile.close()
     except Exception as e:
